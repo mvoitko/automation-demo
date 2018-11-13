@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## Prerequisites
+### Recommended:
 
-You can use the [editor on GitHub](https://github.com/mvoitko/automation-demo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+OS: Unix-based (Linux, MacOS)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Shell: [Zshell](https://ohmyz.sh/)
 
-### Markdown
+### Must install dependencies in order of mentioning:
+1. [Python 3.7](https://www.python.org/downloads/)
+2. [poetry](https://poetry.eustace.io/docs/#installation)
+3. [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html)
+4. [git](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/)
+5. [Create account on Github](https://github.com/join)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Project installation
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Open Terminal run the following commands:
+1. Navigate to project directory:
+```bash
+cd /path/to/projects/directory/
+```
+2. Clone the repository:
+```bash
+git clone git@github.com:mvoitko/automation-demo.git
+```
+3. Navigate to project directory:
+```bash
+cd automation-demo
+```
+4. Create virtualenv:
+```bash
+mkvirtualenv -p python3.7 automation-demo
+```
+5. Install project dependencies with:
+```bash
+poetry install
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mvoitko/automation-demo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Running tests
+Run the following command *IN PROJECT FOLDER*:
+```bash
+pytest
+```
